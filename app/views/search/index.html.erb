@@ -1,8 +1,8 @@
-<h3>22 Students</h3>
+<h3><%= facade.student_count %> Students</h3>
 
 <% facade.students.each do |student| %>
-  <ul>
+  <div class="student">
     <li class="student_name"><%= student.name %></li>
-    <li class="student_id"><%= student.id %></li>
-  </ul>
+    <li class="student_id"><%= student.id %></li><br/>
+  </div>
 <% end %>

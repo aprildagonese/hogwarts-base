@@ -6,7 +6,9 @@ describe "As a user" do
     select "Slytherin", from: :house
     click_on "Get Students"
 
-    expect(current_path).to be("/search?house=slytherin")
+    save_and_open_page
+
+    expect(current_path).to eq("/search")
     expect(page).to have_content("22 Students")
     expect(page).to have_css(".student", count: 22)
     expect(page).to have_css(".student_name", count: 22)
