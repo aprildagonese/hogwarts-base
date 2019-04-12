@@ -6,7 +6,7 @@ describe "As a user" do
     select "Slytherin", from: :house
     click_on "Get Students"
 
-    save_and_open_page
+
 
     expect(current_path).to eq("/search")
     expect(page).to have_content("22 Students")
